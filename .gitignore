@@ -11,3 +11,6 @@ Desktop.ini
 
 # Mac crap
 .DS_Store
+
+# .asv
+*.asv

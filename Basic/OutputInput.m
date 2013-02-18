@@ -174,7 +174,7 @@ outdev.Circuit_Name = 'RZ6_SpeakerOutput_zBus';
 % Dnum = device number - this is for RZ6, device 1
 outdev.Dnum=1;
 outdev.C = [];
-outdev.status = 0;
+outdev.status = 0; 
 
 %------------------------------------------------------
 % initialize some variables for TDT control objects
@@ -183,7 +183,7 @@ outdev.status = 0;
 zBUS = [];
 % attenuator controls
 PA5L = [];
-PA5R = [];
+PA5R = [];  
 
 %---------------------------------------------------------------
 %---------------------------------------------------------------
@@ -420,6 +420,7 @@ PA5setatten(PA5R, atten(2));
 %------------------------------------------------------
 % play the sound and return the response
 %------------------------------------------------------
+keyboard
 [resp, rate] = speakerstim_medusarec_1chan(noise.S, AcquirePoints, indev, outdev, zBUS);
 % de-multiplex the data if more than 1 channel was collected
 % mcDeMux returns an array that is [nChannels, nPoints]
